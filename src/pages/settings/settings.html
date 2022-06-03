@@ -1,0 +1,42 @@
+  <ion-header>
+
+    <ion-toolbar color='danger'>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()"y>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Réglages</ion-title>
+  </ion-toolbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+      <p>&nbsp;&nbsp;Ceci est la page des réglages !</p>
+      <div style="padding:10%;overflow-y: scroll;position: absolute;">
+        <ion-row >
+            <ion-col>
+              <ion-list>
+  
+                
+       <ion-item *ngFor="let item of users" >
+        <div>
+          <ion-item>
+              <img style="width:100%;height:100%;" src="https://firebasestorage.googleapis.com/v0/b/freshfruits-5cee0.appspot.com/o/Images%2F{{item.nom.toLowerCase()}}.png?alt=media&token=c075c303-6291-44fa-a871-71bb09afccd8" />
+          </ion-item>
+        </div>
+        <ion-card>
+         <ion-item *ngIf="item.key=='user1'" >
+          <ion-item style="margin-left: 30%;">
+          {{item.nom}}</ion-item>
+          <div style="margin-top:10px;">
+            <ion-item style="margin-left: 25%;">{{item.prenom}}</ion-item></div>
+          <div style="margin-top:10px;">
+            <ion-item style="margin-left: 25%;">{{item.telnum}}</ion-item></div>
+         </ion-item></ion-card> </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+      </div>
+    </ion-content>
