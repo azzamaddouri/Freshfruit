@@ -1,4 +1,4 @@
-## Project Video
+# Project Video
 
 Discover how to integrate Firebase and SQLite with Ionic 3 in this demo:
 
